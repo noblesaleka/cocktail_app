@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class = "row">
+
+<h3>Glasses</h3>
+        
+<!--loop through coctails in collection -->        
+<ul class="collapsible" data-collapsible="accordion">
+    {% for glass in glasses %}
+    <li>
+        <div class="collapsible-header">
+            <a href = "{{url_for('delete_glass', glass_id=glass._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
+            <a href = "{{url_for('edit_glass', glass_id=glass._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+            <div class="col s9 cocktail_header">
+                <strong>{{glass.glass_name}}</strong>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+</div>
+
+<div class="row">
+    <a href= "{{url_for('add_glass')}}" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Add glass</a>
+    </div>
+{% endblock %}
