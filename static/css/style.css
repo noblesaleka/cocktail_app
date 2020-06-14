@@ -1,3 +1,7 @@
+body {
+    color: black;
+}
+
 .btn_small {
     height: 60px;
     width: 60px;
@@ -7,7 +11,49 @@
     border-radius: 50%;
 }
 
-.cocktail_header{
+.cocktail_header {
     margin-top: 30px;
     padding-left: 15px;
+}
+
+.sigmar {
+    font-family: 'Sigmar One', cursive;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+.navbar {
+    min-height: 20vh;
+}
+
+.top-nav {
+    background-color: #AF4D98;
+}
+
+.nav-item > a:hover {
+    background-color: #9C4488;
+}
+
+footer {
+    background-color: #AF4D98;
+    min-height: 20vh;
+}
+
+.footer-nav li {
+    list-style: none;
+    
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: black;
 }

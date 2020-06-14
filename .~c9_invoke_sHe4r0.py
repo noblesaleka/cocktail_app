@@ -16,7 +16,7 @@ mongo = PyMongo(app)
 
 #connection to database default function
 @app.route('/')
-@app.route('/get_cocktails')
+@app.route('/get_')
 def get_cocktails():
     return render_template("cocktails.html", cocktails=mongo.db.cocktails.find())
 
