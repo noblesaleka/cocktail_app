@@ -41,8 +41,9 @@ h3 {
 
 .nav-item > a:hover {
     background-color: #9C4488;
+    transition: 0.7s;
 }
-
+        
 footer {
     background-color: #AF4D98;
     min-height: 20vh;
@@ -56,4 +57,8 @@ footer {
 .footer-nav a {
     text-decoration: none;
     color: black;
+}
+
+.collapse {
+    height:100px;
 }
