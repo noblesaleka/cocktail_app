@@ -19,13 +19,31 @@ mongo = PyMongo(app)
 @app.route('/get_cocktails')
 def get_cocktails():
     return render_template("cocktails.html", cocktails=mongo.db.cocktails.find())
-
+    
+#display cocktails from searchbar
+@app.route('/search_cocktails', methods=["GET", "POST"])
+def search_cocktails():
+    message = ''
+    if request.method == "POST":
+        req = request.form
+        search_form = req.get('search_field') 
+        search_fields = {"cocktail_name" : search_form}
+        search_results = mongo.db.cocktails.find(search_fields)
+        print(search_form)
+        if search_form == '':
+            return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(), message=message)
+        else:
+            if search_results == '':
+                 message = "No results found"
+            else:
+                return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(search_fields), message=message)
+    
 #display addCocktail page 
 @app.route('/add_cocktail')
 def add_cocktail():
     return render_template("addCocktail.html", 
     glasses=mongo.db.glass.find())
-
+    
 #add new cocktail button functionality  
 @app.route('/insert_cocktail', methods=['POST'])
 def insert_cocktail():

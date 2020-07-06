@@ -59,6 +59,19 @@ footer {
     color: black;
 }
 
-.collapse {
-    height:100px;
+.search-box {
+    padding: 10.875px;
+    margin-top: 10px;
+    /*background-color: #9DF7E5;*/
+}
+
+.search-btn {
+  width: 100%;
+  color: #AF4D98;
+  border-color: #AF4D98;
+}
+
+.search-btn:hover {
+  background-color: #AF4D98;
+  border-color: #AF4D98;
 }
