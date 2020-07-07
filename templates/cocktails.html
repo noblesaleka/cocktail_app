@@ -1,49 +1,49 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-
-<div class="continer-fluid search-box">
-      <form action="search_cocktails" method="POST">
-      
-      <div class="row">
-        <div class="col-8">
-          <input class="form-control" type="search" placeholder="Search" id="search_field" name="search_field" aria-label="Search" value ="">
-        </div>
-        <div class="col-4 ">
-          <button class="btn btn-outline-success search-btn align-bottom" type="submit">Search</button>
-        </div>
-      </div>
-    </form>
+<div class="titlebar sigmar text-center">
+  <h3>Browse All Cockatils</h3>
 </div>
 
-<!--loop through cocktails in collection -->        
-<ul>
-    {% for cocktail in cocktails %}
+<div class="continer-fluid search-box">
+  <form action="search_cocktails" method="POST">
 
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordian-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne">
-                  {{cocktail.cocktail_name}}
-                  {{cocktail._id}}
+    <div class="row">
+      <div class="col-8">
+        <input class="form-control" type="search" placeholder="Search" id="search_field" name="search_field" aria-label="Search" value="">
+      </div>
+      <div class="col-4 ">
+        <button class="btn btn-outline-success search-btn align-bottom" type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--loop through cocktails in collection -->
+<ul>
+  {% for cocktail in cocktails %}
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn sigmar" type="button" data-toggle="collapse" data-target="#accordian-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne">
+                    {{cocktail.cocktail_name}}
                 </button>
-              </h2>
-            </div>
-        
-            <div id="accordian-{{loop.index}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                {{cocktail.cocktail_name}} - {{cocktail.cocktail_description}}
-              </div>
-            </div>
-          </div>
+        </h2>
       </div>
 
-    {% endfor %}
-</ul>
+      <div id="accordian-{{loop.index}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="description">Description: {{cocktail.cocktail_description}}</div>
+          <div class="ingredients">{{cocktail.ingredients}}</div> 
+          <div class="preparation">{{cocktail.preparation_steps}}</div>
 
- {% if message %}
-        <p>{{ message }}</p>
-    {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</ul>
 
 {% endblock %}

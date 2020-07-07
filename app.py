@@ -1,5 +1,5 @@
-import os
-from flask import Flask, render_template, redirect, request, url_for
+import os, re
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -20,24 +20,19 @@ mongo = PyMongo(app)
 def get_cocktails():
     return render_template("cocktails.html", cocktails=mongo.db.cocktails.find())
     
+    
 #display cocktails from searchbar
 @app.route('/search_cocktails', methods=["GET", "POST"])
 def search_cocktails():
-    message = ''
     if request.method == "POST":
         req = request.form
         search_form = req.get('search_field') 
-        search_fields = {"cocktail_name" : search_form}
-        search_results = mongo.db.cocktails.find(search_fields)
-        print(search_form)
-        if search_form == '':
-            return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(), message=message)
-        else:
-            if search_results == '':
-                 message = "No results found"
-            else:
-                return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(search_fields), message=message)
-    
+        #search_fields = {"cocktail_name" : search_form}
+        search_form_re = re.compile('.*(%s).*'%search_form, flags= re.I)
+        #search_fields = {"cocktail_name" : search_form}
+        search_fields = {"cocktail_name" : search_form_re}
+        return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(search_fields))
+
 #display addCocktail page 
 @app.route('/add_cocktail')
 def add_cocktail():

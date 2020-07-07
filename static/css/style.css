@@ -20,6 +20,7 @@ body {
     font-family: 'Sigmar One', cursive;
 }
 
+
 h1 {
     font-size: 2em;
 }
@@ -31,6 +32,15 @@ h2 {
 h3 {
     font-size: 1.6em;
 }
+
+.description {
+    
+}
+
+.btn-link {
+    color: yellow !important;
+}
+
 .navbar {
     min-height: 20vh;
 }
