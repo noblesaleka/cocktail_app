@@ -3,7 +3,7 @@
 <h3>Add Cocktail</h3>
 
 <div class="row">
-    <form action = "{{url_for('insert_cocktail')}}" method="POST" class="col s12">
+    <form id= "upload-form" action = "{{url_for('insert_cocktail')}}" method="POST"  enctype="multipart/form-data" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
@@ -42,8 +42,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
-                <input id="cocktail_description" name="cocktail_description" type="text" class="validate">
-                <label for="cocktail_description">Cocktail Description</label>
+                <input id="cocktail_image" name="cocktail_image" type="file" accept="image/*" class="" multiple>
+                <label for="cocktail_image">Cocktail Image</label>
             </div>
         </div>
         
@@ -65,6 +65,14 @@
               Is Virgin
             </label>
           </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <input id="preparation_steps" name="preparation_steps" type="text" class="validate">
+                <label for="preparation_steps">Prepartaion Steps</label>
+            </div>
         </div>
         
         <div class="row">
