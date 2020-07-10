@@ -34,7 +34,7 @@
 
       <div id="accordian-{{loop.index}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          <img src="{{url_for('static', filename=image_name)}}">
+          <img src="../../{{cocktail.cocktail_image}}" height="42" width="42">
           {{cocktail.cocktail_image}}
           <div class="description">Description: {{cocktail.cocktail_description}}</div>
           <div class="ingredients">{{cocktail.ingredients}}</div> 

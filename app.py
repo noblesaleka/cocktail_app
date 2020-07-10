@@ -1,7 +1,8 @@
 import os, re
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, send_from_directory
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+
 
 app = Flask(__name__)
 
@@ -41,7 +42,7 @@ def add_cocktail():
 #add new cocktail button functionality  
 @app.route('/insert_cocktail', methods=['POST'])
 def insert_cocktail():
-    target = os.path.join(APP_ROOT, 'static')
+    target = os.path.join(APP_ROOT, 'static/images/cocktails')
     print(target)
     
     if not os.path.isdir(target):
@@ -51,13 +52,32 @@ def insert_cocktail():
         print(file)
         filename = file.filename
         destination = "/".join([target, filename])
-        print(destination)
+        print("file is loacated" + destination)
         file.save(destination)
         
     cocktails = mongo.db.cocktails
-    cocktails.insert_one(request.form.to_dict())
+    
+    form_data = {
+        'cocktail_name' : request.form.get('cocktail_name'),
+        'glass_name' : request.form.get('glass_name'),
+        'cocktail_description' : request.form.get('cocktail_description'),
+        'preparation_steps' : request.form.get('preparation_steps'),
+        'is_virgin' : request.form.get('is_virgin'),
+        'ingredients' : request.form.get('ingredients'),
+        'cocktail_strength' : request.form.get('cocktail_strength'),
+        'cocktail_image' : destination
+    }
+    
+    #cocktails.insert_one(request.form.to_dict())
+    cocktails.insert_one(form_data)
+    
     return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(), image_name=filename)
     #return redirect(url_for('get_cocktails'), image_name=filename)
+ 
+#retrieve image path for cocktail images
+@app.route('/upload/<filename>')
+def send_image(filename):
+    return send_from_directory("static/images/cocktails", filename)
     
 #edit button functionality
 @app.route('/edit_cocktail/<cocktail_id>')
