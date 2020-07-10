@@ -1,18 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="titlebar sigmar text-center">
-  <h3>Browse All Cockatils</h3>
+<div class="container-fluid browse-cocktails-section" id="browse-cocktails-section">
+
+<div class="text-center">
+  <h3>Cocktails</h3>
 </div>
 
 <div class="continer-fluid search-box">
   <form action="search_cocktails" method="POST">
 
     <div class="row">
-      <div class="col-8">
+      <div class="col-sm-6 col-md-4 offset-md-6">
         <input class="form-control" type="search" placeholder="Search" id="search_field" name="search_field" aria-label="Search" value="">
       </div>
-      <div class="col-4 ">
-        <button class="btn btn-outline-success search-btn align-bottom" type="submit">Search</button>
+      <div class="col-sm-6 col-md-2">
+        <button class="btn btn-outline-success search-btn align-bottom" id="search_cocktail_btn" type="submit">Search</button>
       </div>
     </div>
   </form>
@@ -26,20 +28,47 @@
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
-          <button class="btn sigmar" type="button" data-toggle="collapse" data-target="#accordian-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne">
+          <button class="btn card-header-h2" type="button" data-toggle="collapse" data-target="#accordian-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne">
                     {{cocktail.cocktail_name}}
-                </button>
+          </button>
         </h2>
       </div>
 
       <div id="accordian-{{loop.index}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          <img src="/static/images/cocktails/{{cocktail.cocktail_image}}" height="42" width="42">
-          <img src="/static/images/cocktails/46t6io.jpg" height="42" width="42">
-          {{cocktail.cocktail_image}}
-          <div class="description">Description: {{cocktail.cocktail_description}}</div>
-          <div class="ingredients">{{cocktail.ingredients}}</div> 
-          <div class="preparation">{{cocktail.preparation_steps}}</div>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-6 "><img src="/static/images/cocktails/{{cocktail.cocktail_image}}" class="img-fluid cocktail_image"></div>
+              <div class="col-6">
+                <div class="description cocktail_fields">Description</div>
+                <div class="document_info">{{cocktail.cocktail_description}}</div>
+                <br>
+                <div class="ingredients cocktail_fields">Ingredients</div> 
+                <div class="document_info">{{cocktail.ingredients}}</div>
+                <br>
+                <div class="preparation cocktail_fields">Steps</div>
+                <div class="document_info">{{cocktail.preparation_steps}}</div>
+                <br>
+                <div class="preparation cocktail_fields">Glass</div>
+                <div class="document_info">{{cocktail.glass_name}}</div>
+                <br>
+                <div class="preparation cocktail_fields">Virgin</div>
+                <div class="document_info">{{cocktail.is_virgin}}</div>
+                <br>
+                <div class="preparation cocktail_fields">Strength</div>
+                <div class="document_info">{{cocktail.cocktail_strength}}</div>
+                </div>
+            </div>
+          </div>
+          
+          
+       
+       
+       
+          
+          
+
+          
 
         </div>
       </div>
@@ -48,5 +77,6 @@
 
   {% endfor %}
 </ul>
+</div>
 
 {% endblock %}

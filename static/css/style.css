@@ -6,9 +6,7 @@ html {
 }
 
 body {
-    color: black;
     font-family: 'Raleway', sans-serif;
-   
 }
 
 .rotate {
@@ -57,7 +55,6 @@ body {
 #browse_cocktail_btn {
     font-family: 'Arvo', serif;
     letter-spacing: 4px; 
-    
 }
 
 .btn_small {
@@ -81,16 +78,36 @@ h1 {
 
 h2 {
     font-size: 1.8em;
+    font-family: 'Arvo', serif;
+    color: #004aad !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.card-header-h2 {
+    font-family: 'Arvo', serif;
+    color: #004aad !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
 }
 
 h3 {
     font-family: 'Arvo', serif;
-    color: white !important;
-    font-weight: 500;
+    color: #004aad !important;
+    font-weight: 500 !important;
     text-transform: uppercase;
     position: relative;
     text-decoration: none;
     letter-spacing: 2px;
+}
+
+.browse-cocktails-section h3 {
+    letter-spacing: 5px;
+    text-decoration: underline;
 }
 
 .nav-link {
@@ -135,11 +152,13 @@ h3 {
 footer {
     border-radius: 10px;
     background-image: url("../images/logo/louis-hansel-shotsoflouis-b8-G0zZDCyY-unsplash.jpg");
-    background-position: 0px -200px;
+    
     background-size: cover;
     background-repeat: no-repeat;
-   
-    
+}
+
+.footer h3 {
+    color: white !important;
 }
 
 .footer-nav li {
@@ -175,6 +194,9 @@ footer {
     transform: scaleX(1);
 }
 
+.grey-background {
+    background-color: rgba(0,0,0,0.3)
+}
 
 .search-box {
     padding: 10.875px;
@@ -184,11 +206,40 @@ footer {
 
 .search-btn {
   width: 100%;
-  color: #AF4D98;
-  border-color: #AF4D98;
+  color: #004aad;
+  border-color: #004aad;
+  transition: 0.75s ease-in-out;
+  border-radius: 10px;
 }
 
 .search-btn:hover {
-  background-color: #AF4D98;
-  border-color: #AF4D98;
+    background-color: #338BFF !important;
+    border-color: #5CA3FF; 
+}
+
+#search_cocktail_btn {
+    font-family: 'Arvo', serif;
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.card-header {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.cocktail_image {
+    min-width: 100%;
+    max-height: 300px;
+    object-fit:cover;
+}
+
+.cocktail_fields {
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    color: #004aad;
+    font-family: 'Arvo', serif;
+    
 }
