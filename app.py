@@ -54,7 +54,8 @@ def insert_cocktail():
         destination = "/".join([target, filename])
         print("file is loacated" + destination)
         file.save(destination)
-        
+        rel_destination = file.filename
+        print("rel is loacated" + rel_destination)
     cocktails = mongo.db.cocktails
     
     form_data = {
@@ -65,7 +66,7 @@ def insert_cocktail():
         'is_virgin' : request.form.get('is_virgin'),
         'ingredients' : request.form.get('ingredients'),
         'cocktail_strength' : request.form.get('cocktail_strength'),
-        'cocktail_image' : destination
+        'cocktail_image' : rel_destination
     }
     
     #cocktails.insert_one(request.form.to_dict())
