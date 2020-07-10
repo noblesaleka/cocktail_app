@@ -1,5 +1,63 @@
+html {
+     box-sizing: border-box;
+      padding: 0px;
+      margin: 0px;
+    scroll-behavior: smooth;
+}
+
 body {
     color: black;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+.rotate {
+  writing-mode: vertical-lr;
+  display: inline;
+  transform: rotate(180deg) translateX(-5px) !important;
+}
+ .navbar {
+     border-radius: 10px;
+ }
+
+@media (max-width: 768px) { 
+  .hide-sm {
+  display: none;
+} }
+
+.reg-btn {
+  color: white;
+  background-color: #004aad !important;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #004aad;
+  border-color: #004aad; 
+  transition: 0.75s ease-in-out;
+  border-radius: 10px;
+    
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #338BFF !important;
+    border-color: #5CA3FF; 
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #5CA3FF;
+    border-color: #5CA3FF;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); 
+}
+
+#browse_cocktail_btn {
+    font-family: 'Arvo', serif;
+    letter-spacing: 4px; 
+    
 }
 
 .btn_small {
@@ -16,10 +74,6 @@ body {
     padding-left: 15px;
 }
 
-.sigmar {
-    font-family: 'Sigmar One', cursive;
-}
-
 
 h1 {
     font-size: 2em;
@@ -30,44 +84,97 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6em;
+    font-family: 'Arvo', serif;
+    color: white !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 2px;
 }
 
-.description {
+.nav-link {
+    font-family: 'Arvo', serif;
+    color: white !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.nav-item > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.nav-item > a:hover::before {
+    visibility: visible;
+  transform: scaleX(1);
+}
+
+
+.jumbotron {
+    background-image: url("../images/logo/louis-hansel-shotsoflouis-Kix0S25vJEo-unsplash.jpg");
+    background-position: 0px -400px;
+    border-radius: 10px !important;
+    min-height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 0;
     
-}
-
-.btn-link {
-    color: yellow !important;
-}
-
-.navbar {
-    min-height: 20vh;
-}
-
-.top-nav {
-    background-color: #AF4D98;
-}
-
-.nav-item > a:hover {
-    background-color: #9C4488;
-    transition: 0.7s;
-}
+}   
         
 footer {
-    background-color: #AF4D98;
-    min-height: 20vh;
+    border-radius: 10px;
+    background-image: url("../images/logo/louis-hansel-shotsoflouis-b8-G0zZDCyY-unsplash.jpg");
+    background-position: 0px -200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
 }
 
 .footer-nav li {
     list-style: none;
-    
+    color: white !important;
+    font-weight: 200;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
 }
 
-.footer-nav a {
+.footer-nav-item a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: 200;
 }
+
+.footer-nav-item > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.footer-nav-item > a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
 
 .search-box {
     padding: 10.875px;
