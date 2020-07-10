@@ -2,7 +2,7 @@ html {
      box-sizing: border-box;
       padding: 0px;
       margin: 0px;
-    scroll-behavior: smooth;
+      scroll-behavior: smooth;
 }
 
 body {
@@ -25,15 +25,15 @@ body {
 
 .reg-btn {
   color: white;
-  background-color: #004aad !important;
+  background-color: #517cb5 !important;
   text-transform: uppercase;
   font-size: 0.75em;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #004aad;
-  border-color: #004aad; 
+  background-color: #517cb5;
+  border-color: #517cb5; 
   transition: 0.75s ease-in-out;
   border-radius: 10px;
     
@@ -41,8 +41,8 @@ body {
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #338BFF !important;
-    border-color: #5CA3FF; 
+    background-color: #436A9D !important;
+    border-color: #436A9D; 
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -206,15 +206,15 @@ footer {
 
 .search-btn {
   width: 100%;
-  color: #004aad;
-  border-color: #004aad;
+  color: #517cb5;
+  border-color: #517cb5;
   transition: 0.75s ease-in-out;
   border-radius: 10px;
 }
 
 .search-btn:hover {
-    background-color: #338BFF !important;
-    border-color: #5CA3FF; 
+    background-color: #517cb5 !important;
+    border-color: #517cb5; 
 }
 
 #search_cocktail_btn {
@@ -225,7 +225,7 @@ footer {
 }
 
 .card-header {
-    background-color: rgba(0,0,0,0.3);
+    background-color: #f8f9fa;
 }
 
 .cocktail_image {
@@ -242,4 +242,48 @@ footer {
     color: #004aad;
     font-family: 'Arvo', serif;
     
+}
+
+.ingredient_list {
+    list-style: none !important;
+}
+
+.preparation_list {
+    list-style: none !important;
+}
+
+.card_list {
+    padding: 0;
+}
+
+#delete_cocktail_btn {
+    color: #ab5f7a;
+    background-color: rgba(0,0,0,0) !important;
+    text-transform: uppercase;
+    font-size: 0.75em; 
+    border-color: #ab5f7a; 
+    letter-spacing: 2px; 
+    font-family: 'Arvo', serif;
+}
+
+#delete_cocktail_btn:hover {
+    background-color: #ab5f7a !important;
+    border-color: #ab5f7a; 
+    color: white;
+}
+
+#edit_cocktail_btn {
+    color: #517cb5;
+    background-color: rgba(0,0,0,0) !important;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    border-color: #517cb5; 
+    letter-spacing: 2px; 
+    font-family: 'Arvo', serif;
+}
+
+#edit_cocktail_btn:hover {
+    background-color: #517cb5 !important;
+    border-color: #517cb5; 
+    color: white;
 }

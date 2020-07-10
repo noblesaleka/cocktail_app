@@ -62,18 +62,15 @@ def insert_cocktail():
         'cocktail_name' : request.form.get('cocktail_name'),
         'glass_name' : request.form.get('glass_name'),
         'cocktail_description' : request.form.get('cocktail_description'),
-        'preparation_steps' : request.form.get('preparation_steps'),
+        'preparation_steps' : request.form.get('preparation_steps').split(','),
         'is_virgin' : request.form.get('is_virgin'),
-        'ingredients' : request.form.get('ingredients'),
+        'ingredients' : request.form.get('ingredients').split(','),
         'cocktail_strength' : request.form.get('cocktail_strength'),
         'cocktail_image' : rel_destination
     }
-    
-    #cocktails.insert_one(request.form.to_dict())
     cocktails.insert_one(form_data)
-    
     return render_template("cocktails.html", cocktails=mongo.db.cocktails.find(), image_name=filename)
-    #return redirect(url_for('get_cocktails'), image_name=filename)
+   
  
 #retrieve image path for cocktail images
 @app.route('/upload/<filename>')
