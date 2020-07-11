@@ -140,7 +140,7 @@ h3 {
 
 .jumbotron {
     background-image: url("../images/logo/louis-hansel-shotsoflouis-Kix0S25vJEo-unsplash.jpg");
-    background-position: 0px -400px;
+    
     border-radius: 10px !important;
     min-height: 60vh;
     background-size: cover;
@@ -286,4 +286,18 @@ footer {
     background-color: #517cb5 !important;
     border-color: #517cb5; 
     color: white;
+}
+
+#add_cocktail_btn {
+    text-transform: uppercase;
+    font-size: 0.75em; 
+    letter-spacing: 2px; 
+    font-family: 'Arvo', serif;
+}
+
+#edit_cocktail_btn {
+    text-transform: uppercase;
+    font-size: 0.75em; 
+    letter-spacing: 2px; 
+    font-family: 'Arvo', serif;
 }
