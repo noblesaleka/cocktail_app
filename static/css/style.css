@@ -1,3 +1,4 @@
+/*-------GENERAL PAGE STYLES--------*/
 html {
      box-sizing: border-box;
       padding: 0px;
@@ -9,20 +10,33 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.rotate {
-  writing-mode: vertical-lr;
-  display: inline;
-  transform: rotate(180deg) translateX(-5px) !important;
+/*-------FONTS--------*/
+h1 {
+    font-size: 2em;
 }
- .navbar {
-     border-radius: 10px;
- }
 
-@media (max-width: 768px) { 
-  .hide-sm {
-  display: none;
-} }
+h2 {
+    font-size: 1.8em;
+    font-family: 'Arvo', serif;
+    color: #004aad !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+}
 
+h3 {
+    font-family: 'Arvo', serif;
+    color: #004aad !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+
+/*-------BUTTONS--------*/
 .reg-btn {
   color: white;
   background-color: #517cb5 !important;
@@ -36,7 +50,6 @@ body {
   border-color: #517cb5; 
   transition: 0.75s ease-in-out;
   border-radius: 10px;
-    
 }
 
 .btn-primary:hover {
@@ -64,195 +77,6 @@ body {
     margin: 5px 5px;
     padding: 0 0.5em;
     border-radius: 50%;
-}
-
-.cocktail_header {
-    margin-top: 30px;
-    padding-left: 15px;
-}
-
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.8em;
-    font-family: 'Arvo', serif;
-    color: #004aad !important;
-    font-weight: 500 !important;
-    text-transform: uppercase;
-    position: relative;
-    letter-spacing: 2px;
-}
-
-.card-header-h2 {
-    font-family: 'Arvo', serif;
-    color: #004aad !important;
-    font-weight: 500 !important;
-    text-transform: uppercase;
-    position: relative;
-    letter-spacing: 2px;
-}
-
-h3 {
-    font-family: 'Arvo', serif;
-    color: #004aad !important;
-    font-weight: 500 !important;
-    text-transform: uppercase;
-    position: relative;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.browse-cocktails-section h3 {
-    letter-spacing: 5px;
-    text-decoration: underline;
-}
-
-.nav-link {
-    font-family: 'Arvo', serif;
-    color: white !important;
-    font-weight: 500;
-    text-transform: uppercase;
-    position: relative;
-    letter-spacing: 2px;
-}
-
-.nav-item > a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.5s ease-in-out 0s;
-}
-
-.nav-item > a:hover::before {
-    visibility: visible;
-  transform: scaleX(1);
-}
-
-
-.jumbotron {
-    background-image: url("../images/logo/louis-hansel-shotsoflouis-Kix0S25vJEo-unsplash.jpg");
-    border-radius: 10px !important;
-    min-height: 60vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 0;
-    
-}   
-        
-footer {
-    border-radius: 10px;
-    background-image: url("../images/logo/louis-hansel-shotsoflouis-b8-G0zZDCyY-unsplash.jpg");
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.footer h3 {
-    color: white !important;
-}
-
-.footer-nav li {
-    list-style: none;
-    color: white !important;
-    font-weight: 200;
-    text-transform: uppercase;
-    position: relative;
-    letter-spacing: 2px;
-}
-
-.footer-nav-item a {
-    text-decoration: none;
-    color: white;
-    font-weight: 200;
-}
-
-.footer-nav-item > a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.5s ease-in-out 0s;
-}
-
-.footer-nav-item > a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-.grey-background {
-    background-color: rgba(0,0,0,0.3)
-}
-
-.search-box {
-    padding: 10.875px;
-    margin-top: 10px;
-    /*background-color: #9DF7E5;*/
-}
-
-.search-btn {
-  width: 100%;
-  color: #517cb5;
-  border-color: #517cb5;
-  transition: 0.75s ease-in-out;
-  border-radius: 10px;
-}
-
-.search-btn:hover {
-    background-color: #517cb5 !important;
-    border-color: #517cb5; 
-}
-
-#search_cocktail_btn {
-    font-family: 'Arvo', serif;
-    letter-spacing: 2px; 
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.card-header {
-    background-color: #f8f9fa;
-}
-
-.cocktail_image {
-    min-width: 100%;
-    max-height: 300px;
-    object-fit:cover;
-}
-
-.cocktail_fields {
-    font-size: 0.8em;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px; 
-    color: #004aad;
-    font-family: 'Arvo', serif;
-    
-}
-
-.ingredient_list {
-    list-style: none !important;
-}
-
-.preparation_list {
-    list-style: none !important;
-}
-
-.card_list {
-    padding: 0;
 }
 
 #delete_cocktail_btn {
@@ -341,7 +165,197 @@ footer {
     color: white;
 }
 
+/*-------NAVIGATION--------*/
+
+.navbar {
+     border-radius: 10px;
+}
+
+.nav-link {
+    font-family: 'Arvo', serif;
+    color: white !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.nav-item > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.nav-item > a:hover::before {
+    visibility: visible;
+  transform: scaleX(1);
+}
+
+/*-------BASE--------*/
+.jumbotron {
+    background-image: url("../images/logo/louis-hansel-shotsoflouis-Kix0S25vJEo-unsplash.jpg");
+    border-radius: 10px !important;
+    min-height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 0;
+}   
+        
+footer {
+    border-radius: 10px;
+    background-image: url("../images/logo/louis-hansel-shotsoflouis-b8-G0zZDCyY-unsplash.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer h3 {
+    color: white !important;
+    font-size: 1.2em;
+}
+
+.footer-nav li {
+    list-style: none;
+    color: white !important;
+    font-weight: 200;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.footer-nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+}
+
+.footer-nav-item > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.footer-nav-item > a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.grey-background {
+    background-color: rgba(0,0,0,0.3)
+}
+
+.search-box {
+    padding: 10.875px;
+    margin-top: 10px;
+    /*background-color: #9DF7E5;*/
+}
+
+.search-btn {
+  width: 100%;
+  color: #517cb5;
+  border-color: #517cb5;
+  transition: 0.75s ease-in-out;
+  border-radius: 10px;
+}
+
+.search-btn:hover {
+    background-color: #517cb5 !important;
+    border-color: #517cb5; 
+}
+
+#search_cocktail_btn {
+    font-family: 'Arvo', serif;
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/*-------GET COCKTAILS--------*/
+
+.cocktail_header {
+    margin-top: 30px;
+    padding-left: 15px;
+}
+
+.card-header-h2 {
+    font-family: 'Arvo', serif;
+    color: #004aad !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.browse-cocktails-section h3 {
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+.cocktail_image {
+    min-width: 100%;
+    max-height: 300px;
+    object-fit:cover;
+}
+
+.cocktail_fields {
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    color: #004aad;
+    font-family: 'Arvo', serif;
+    
+}
+
+.ingredient_list {
+    list-style: none !important;
+}
+
+.preparation_list {
+    list-style: none !important;
+}
+
+.card_list {
+    padding: 0;
+}
+
 .browse-section h3 {
     letter-spacing: 5px;
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
