@@ -37,16 +37,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                          <a class="nav-link" href="{{url_for('get_cocktails')}}">Cocktails</span></a>
+                          <a class="nav-link" href="{{url_for('get_cocktails', _anchor='browse-cocktails-section')}}">Cocktails</span></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="{{url_for('get_glasses')}}">Ingredients</a>
+                          <a class="nav-link" href="{{url_for('get_glasses', _anchor='browse-glasses-section')}}">Glassware</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="{{url_for('get_glasses')}}">Glassware</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="{{url_for('add_cocktail')}}">Add Cocktail</a>
+                          <a class="nav-link" href="{{url_for('add_cocktail', _anchor='add_cocktail_section')}}">Add Cocktail</a>
                         </li>
                       </ul>
                     </div>
@@ -82,75 +79,42 @@
     <footer class="footer">
       <div class="container-fluid text-center">
         <div class="row">
-          <div class="col-md-4 grey-background">
+          <div class="col-md-6 grey-background">
 
             <ul class="footer-nav">
               <li>
                 <h3>Quick Links</h3>
               </li>
               <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
+                <a href="{{url_for('get_cocktails', _anchor='browse-cocktails-section')}}">
                     Cocktails
                     </a>
               </li>
               <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
-                    Ingredients
-                    </a>
-              </li>
-              <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
+                <a href="{{url_for('get_glasses', _anchor='browse-glasses-section')}}">
                     Glassware
                     </a>
               </li>
               <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
+                <a href="{{url_for('add_cocktail', _anchor='add_cocktail_section')}}">
                     Add a Cocktail
                     </a>
               </li>
             </ul>
           </div>
-          <div class="col-md-4 grey-background">
+          <div class="col-md-6 grey-background">
             <ul class="footer-nav">
               <li>
                 <h3>About</h3>
               </li>
               <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
+                <a href="{{url_for('get_cocktails', _anchor='add_cocktail_section')}}">
                     Inspiration
                     </a>
               </li>
               <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
-                    Get to know the creator
-                    </a>
-              </li>
-              <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
+                <a href="{{url_for('get_cocktails', _anchor='add_cocktail_section')}}">
                     Read me
-                    </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 grey-background">
-
-            <ul class="footer-nav">
-              <li>
-                <h3>Get in Touch</h3>
-              </li>
-              <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
-                    FAQ
-                    </a>
-              </li>
-              <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
-                    Cocktail Quiz
-                    </a>
-              </li>
-              <li class="footer-nav-item">
-                <a href="{{url_for('get_cocktails')}}">
-                    Contact Us
                     </a>
               </li>
             </ul>
