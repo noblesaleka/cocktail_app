@@ -62,7 +62,7 @@ stevedore==1.32.0
 tomlkit==0.5.8
 traitlets==4.3.3
 tzlocal==2.0.0
-urllib3==1.25.9
+urllib3==1.26.5
 virtualenv==16.2.0
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
