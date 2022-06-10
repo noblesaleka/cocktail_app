@@ -11,7 +11,7 @@ botocore==1.15.40
 chevron==0.13.1
 Click==7.0
 colorama==0.4.3
-cookiecutter==1.6.0
+cookiecutter==2.1.1
 dateparser==0.7.2
 decorator==4.4.2
 Django==2.0.2
